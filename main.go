@@ -83,7 +83,7 @@ func isActiveListener() {
 		mousePosX, mousePosY := robotgo.Location()
 		if lastMousePosX != mousePosX || lastMousePosY != mousePosY {
 			if !isActive {
-				notify.Alert("StandUp", "StandUp", fmt.Sprintf("You are active again (%s remaining)", getRemainingTime()), "")
+				notify.Alert("StandUp", "StandUp", fmt.Sprintf("You are active again (%s %s remaining)", getRemainingTime(), phaseTimer.State), "")
 			}
 			isActive = true
 			lastStateChangeTime = time.Now()
